@@ -1,0 +1,237 @@
+/* guide lines 
+
+--- FONT SIZE SYSTEM (rem)
+    1 / 1.2 / 1.4 / 1.6 / 1.8 / 2 / 2.4 / 3 / 3.6 / 4.4 / 5.2 / 6.2 / 7.4 / 8.6 / 9.8
+
+--- FONT WEIGHT SYSTEM 
+    defualt: 400 
+    medium: 500 
+    semi-bold: 600 
+    bold: 700
+
+--- LINE HEIGHT SYSTEM 
+    1 / 1.05 / 1.2 / 1.6 / 1.8 
+
+--- letter spacing
+    -0.5px / 0.75px 
+
+--- COLORS
+    Brand color: #e67e22
+
+    TINS : #fdf2e9 , #fae5d3, #eb984e
+    SHADES : #cf711f , #45260a
+    ACCENTS : #
+    grayS : 1-#333 2-#555 3-#999 4-rgba(170, 170, 170, 0.445)s
+    wighet: #fff
+
+--- SHADOWS
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.5);
+
+
+--- border-radius
+    defult: 9px 11px
+
+--- WIGHT SPACE(PX)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+/* ********************************************/
+/* css reset*/
+/* ********************************************/
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 3px dotted #e67d227e;
+  outline-offset: 8px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #555;
+}
+strong {
+  font-weight: 600;
+}
+/* list */
+ul {
+  list-style: none;
+}
+/* list iconst */
+ion-icon {
+  font-size: 2.4rem;
+  color: #e67e22;
+}
+/* ********************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/* ********************************************/
+/* helper classes */
+.center-text {
+  text-align: center;
+}
+/* margin helper classes */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+/* padding helper classes */
+.padding-top-md {
+  padding-top: 4.8rem !important;
+}
+
+/* grid containers */
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/* container */
+.container {
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  width: 100%;
+  max-width: 120rem;
+}
+
+/* reusable list style */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.list-item ion-icon {
+  font-size: 3rem;
+}
+
+/* typoghraphy components  */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  color: #333;
+}
+.heading-primary {
+  margin-bottom: 3.2rem;
+
+  font-size: 5.2rem;
+  line-height: 1.05;
+}
+.heading-secondary {
+  margin-bottom: 9.6rem;
+
+  font-size: 4.4rem;
+  line-height: 1.2;
+}
+.heading-tertiary {
+  margin-bottom: 3.2rem;
+
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.section-name-text {
+  margin-bottom: 1.6rem;
+
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+
+  color: #cf711f;
+}
+/* genarik link style */
+.link:link,
+.link:visited {
+  padding-bottom: 2px;
+  font-size: 1.8rem;
+
+  color: #e67e22;
+
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  transition: color ease 0.3s, border ease 0.3s;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+
+  border-bottom: 1px solid transparent;
+}
+/* btn */
+.btn,
+.btn:link,
+.btn:visited {
+  padding: 1.6rem 3.2rem;
+
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+
+  background: #fff;
+  color: #555;
+
+  border-radius: 9px;
+
+  transition: box-shadow ease-in-out 0.3s, background ease-in-out 0.3s;
+}
+
+/* primary btn styling */
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+  background: #e67e22;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #cf711f;
+}
+
+/* light btn styling */
+.btn-light:hover {
+  background: none;
+
+  box-shadow: inset 0 0 0 3px #fff;
+}

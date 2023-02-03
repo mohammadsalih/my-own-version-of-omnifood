@@ -1,6 +1,6 @@
 function open_nav() {
   const nav_icon = document.getElementsByClassName("menu-icon");
-  const nav = document.getElementsByClassName("main-nav-container");
+  const nav = document.getElementsByClassName("main-nav");
 
   for (i = 0; i < nav_icon.length; i++) {
     nav_icon[i].classList.toggle("icon-hide");

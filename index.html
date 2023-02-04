@@ -821,7 +821,7 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form">
+              <form class="cta-form" name="signup" netlify>
                 <div>
                   <label class="cta-input-label" for="name"
                     >Full name</label
@@ -830,6 +830,7 @@
                     class="cta-input"
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Mohammad omer"
                     required
                   />
@@ -843,6 +844,7 @@
                     class="cta-input"
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="main@gufft.com"
                     required
                   />
@@ -857,6 +859,7 @@
                   <select
                     class="cta-input"
                     id="select-where"
+                    name="select-where"
                     required
                   >
                     <option value="">
@@ -874,7 +877,11 @@
                   </select>
                 </div>
 
-                <button type="submit" class="cta-btn">
+                <button
+                  type="submit"
+                  name="submit"
+                  class="cta-btn"
+                >
                   Sign up now
                 </button>
               </form>

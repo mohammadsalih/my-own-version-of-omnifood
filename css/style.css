@@ -370,8 +370,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 }
+/* .galary:hover > :not(:hover) {
+  opacity: 0.75;
+} */
+
 .galary-item {
   overflow: hidden;
+
+  /* transition: all ease 0.3s; */
 }
 .galary-img {
   display: block;
